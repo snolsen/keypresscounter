@@ -1,0 +1,24 @@
+VKey: 0001 	 Count:       119
+VKey: 0002 	 Count:        23
+VKey: 0009 	 Count:         2
+VKey: 0017 	 Count:         1
+VKey: 0018 	 Count:         2
+VKey: 0048 	 Count:         1
+VKey: 0065 	 Count:        21
+VKey: 0067 	 Count:         2
+VKey: 0068 	 Count:        25
+VKey: 0069 	 Count:         6
+VKey: 0070 	 Count:         6
+VKey: 0081 	 Count:         4
+VKey: 0082 	 Count:         3
+VKey: 0083 	 Count:        23
+VKey: 0086 	 Count:         3
+VKey: 0087 	 Count:         7
+VKey: 0088 	 Count:         4
+VKey: 0090 	 Count:         5
+VKey: 0091 	 Count:         2
+
+
+Total no. of keystrokes: 117
+Mouse clicks: 119 (left) 23 (right)
+VKey of last keystroke: 0000 (000)
