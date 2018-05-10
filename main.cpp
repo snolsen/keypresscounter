@@ -53,9 +53,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 
 		StringCchPrintf(windowText, sizeof windowText,
-			L"%s %-12d\n"
-			L"%s %-12d\n"
-			L"%s %-12d\n"
+			L"%s %-12lu\n"
+			L"%s %-12lu\n"
+			L"%s %-12lu\n"
 			L"%s %#04x (%03d)",
 			L"Total number of keystrokes:", keyPressStats.getTotalKeys(),
 			L"Mouseclicks (left):", keyPressStats.getTotalLMB(),
@@ -221,7 +221,7 @@ USHORT getVKfromRaw(HRAWINPUT hRawInput)
 		HRESULT hResult = 0;
 		WCHAR szTempOutput[1024] = { L"" };
 
-		hResult = StringCchPrintf(szTempOutput, sizeof szTempOUtput, L" Kbd: make=%04x Flags:%04x Reserved:%04x ExtraInformation:%08x, msg=%04x VK=%04x \n",
+		hResult = StringCchPrintf(szTempOutput, sizeof szTempOutput, L" Kbd: make=%04x Flags:%04x Reserved:%04x ExtraInformation:%08x, msg=%04x VK=%04x \n",
 			raw->data.keyboard.MakeCode,
 			raw->data.keyboard.Flags,
 			raw->data.keyboard.Reserved,

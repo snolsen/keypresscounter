@@ -40,7 +40,7 @@ void KeyPressStats::printReport()
 		WCHAR szOutput[1024];
 		for (const auto &v : keyStats)
 		{
-			StringCchPrintf(szOutput, sizeof szOutput, L"VKey: %04d \t Count: %9d\n", v.first, v.second);
+			StringCchPrintf(szOutput, sizeof szOutput, L"VKey: %04d \t Count: %9lu\n", v.first, v.second);
 #ifdef _DEBUG
 			OutputDebugString(szOutput);
 #endif // _DEBUG
@@ -48,9 +48,9 @@ void KeyPressStats::printReport()
 			if (oFile.is_open())
 				oFile << szOutput;
 		}		
-		StringCchPrintf(szOutput, sizeof szOutput, L"\n\nTotal no. of keystrokes: %d\n", getTotalKeys());
+		StringCchPrintf(szOutput, sizeof szOutput, L"\n\nTotal no. of keystrokes: %lu\n", getTotalKeys());
 		oFile << szOutput;
-		StringCchPrintf(szOutput, sizeof szOutput, L"Mouse clicks: %d (left) %d (right)\n", getTotalLMB(), getTotalRMB());
+		StringCchPrintf(szOutput, sizeof szOutput, L"Mouse clicks: %lu (left) %lu (right)\n", getTotalLMB(), getTotalRMB());
 		oFile << szOutput;
 		StringCchPrintf(szOutput, sizeof szOutput, L"VKey of last keystroke: %#04x (%03d)\n", getLast(), getLast());
 		oFile << szOutput;
@@ -103,7 +103,7 @@ ULONG KeyPressStats::getTotalKeys()
 	}
 #ifdef _DEBUG
 	WCHAR szOutput[1024];
-	StringCchPrintf(szOutput, sizeof szOutput, L"Total no. of keystrokes: %d\n", sum);
+	StringCchPrintf(szOutput, sizeof szOutput, L"Total no. of keystrokes: %lu\n", sum);
 	OutputDebugString(szOutput);
 #endif // _DEBUG
 
